@@ -1,4 +1,4 @@
-import { getLinks, addLink } from '../resources/links_manager';  // Adjust the path as necessary
+import { getLinks, addLink } from '../resources/links_manager.js';  // Adjust the path as necessary
 
 export const name = 'add';
 export const description = 'Adds a new link to the links dictionary';

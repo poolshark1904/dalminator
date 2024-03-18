@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
 dotenv.config();
-import { getLinks } from './resources/links_manager';
+import { getLinks } from './resources/links_manager.js';
 
 import { Client, GatewayIntentBits, Collection } from "discord.js";
 const client = new Client({
