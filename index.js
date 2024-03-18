@@ -1,5 +1,6 @@
 import dotenv from "dotenv";
 dotenv.config();
+import { getLinks } from './resources/links_manager';
 
 import { Client, GatewayIntentBits, Collection } from "discord.js";
 const client = new Client({
@@ -50,6 +51,8 @@ client.on("messageCreate", async (message) => {
     }
   }
 
+  // Use getLinks() to fetch the most up-to-date links data
+  const linksData = getLinks();
   if (Object.hasOwnProperty.call(linksData, commandName)) {
     message.channel.send(linksData[commandName]);
     return;
